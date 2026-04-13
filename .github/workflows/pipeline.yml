@@ -13,9 +13,16 @@ jobs:
       - name: Clonar repositorio
         uses: actions/checkout@v3
 
+      - name: Instalar Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
       - name: Instalar dependencias
-        run: |
-          echo "Simulando instalación de dependencias"
+        run: npm install
+
+      - name: Build del proyecto
+        run: npm run build
 
   deploy:
     needs: build
@@ -25,8 +32,19 @@ jobs:
       - name: Clonar repositorio
         uses: actions/checkout@v3
 
-      - name: Desplegar en GitHub Pages
+      - name: Instalar Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Build del proyecto
+        run: npm run build
+
+      - name: Deploy a GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./dist
