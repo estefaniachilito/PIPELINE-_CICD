@@ -7,7 +7,10 @@ const config = {
 			pages: 'dist',
 			assets: 'dist',
 			fallback: 'index.html'
-		})
+		}),
+		paths: {
+			base: '/PIPELINE_CICD'
+		}
 	}
 };
 
