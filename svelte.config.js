@@ -9,9 +9,6 @@ const config = {
 		}),
 		paths: {
 			base: '/PIPELINE_CICD'
-		},
-		prerender: {
-			default: true
 		}
 	}
 };
