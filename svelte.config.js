@@ -5,7 +5,8 @@ const config = {
 		adapter: adapter({
 			pages: 'dist',
 			assets: 'dist',
-			fallback: null
+			fallback: 'index.html', 
+			strict: false 
 		}),
 		paths: {
 			base: '/PIPELINE_CICD'
