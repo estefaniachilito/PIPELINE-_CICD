@@ -9,8 +9,7 @@ const config = {
 			strict: false
 		}),
 		paths: {
-			base: '/PIPELINE_CICD',
-			assets: '/PIPELINE_CICD'
+			base: '/PIPELINE_CICD'
 		}
 	}
 };
